@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="images/logo_sekolah.jpg" class="rounded-circle">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Project KP (SPP)</title>
+</head>
+
+<body class="bg-dark">
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <aside id="sidebar" class="">
+            <!-- display sidebar di hide sementara -->
+            <div class="h-100">
+                <div class="sidebar-logo">
+                    <a href="#">Pembayaran SPP</a>
+                </div>
+                <!-- Sidebar Navigation -->
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header d-flex align-items-center p-0 ps-3">
+                        <img src="images/user.jpg" alt="" class="h-25 w-25 rounded-circle">
+                        <span style="font-size: 1rem; letter-spacing: 0.08rem;" class="ps-3 fw-bold">SUPERUSER</span>
+                    </li>
+                    <!-- Main Menu -->
+                    <li class="sidebar-header">
+                        Menu Utama
+                    </li>
+                    <!-- Dashboard -->
+                    <li class="sidebar-item" id="dboardButton" onclick="openDBoard()">
+                        <!-- percobaan (jangan lupa dilihat) -->
+                        <a href="#" class="sidebar-link active">
+                            <i class="bi bi-sliders pe-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <!-- Transaksi Pembayaran -->
+                    <li class="sidebar-item" id="transButton" onclick="openTrans()">
+                        <a href="#" class="sidebar-link" onclick="openTrans()">
+                            <i class="bi bi-credit-card pe-2"></i>
+                            Transaksi Pembayaran
+                        </a>
+                    </li>
+
+                    <!-- Kirim Tagihan -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">
+                            <i class="bi bi-whatsapp pe-2"></i>
+                            Kirim Tagihan
+                        </a>
+                    </li>
+
+                    <!-- Data Keuangan -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#data-keuangan" aria-expanded="false" aria-controls="data-keuangan">
+                            <i class="bi bi-cash-stack pe-2"></i>
+                            Data Keuangan
+                        </a>
+                        <ul id="data-keuangan" class="sidebar-dropdown list-unstyled collapse"
+                            data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 1
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 2
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Data Jurnal Umum -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#data-jurnal" aria-expanded="false" aria-controls="data-jurnal">
+                            <i class="bi bi-pencil-square pe-2"></i>
+                            Data Jurnal Umum
+                        </a>
+                        <ul id="data-jurnal" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 1
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 2
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Master Data -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#master"
+                            aria-expanded="false" aria-controls="master">
+                            <i class="bi bi-activity pe-2"></i>
+                            Master Data
+                        </a>
+                        <ul id="master" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 1
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 2
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 3
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Data Laporan -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#data-laporan" aria-expanded="false" aria-controls="data-laporan">
+                            <i class="bi bi-newspaper pe-2"></i>
+                            Data Laporan
+                        </a>
+                        <ul id="data-laporan" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 1
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 2
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 3
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Data Informasi -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">
+                            <i class="bi bi-megaphone pe-2"></i>
+                            Data Informasi
+                        </a>
+                    </li>
+
+                    <!-- Secondary Menu -->
+                    <li class="sidebar-header">
+                        Menu Tambahan
+                    </li>
+                    <!-- Pengaturan Aplikasi -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#pengaturan" aria-expanded="false" aria-controls="pengaturan">
+                            <i class="bi bi-gear pe-2"></i>
+                            Pengaturan Aplikasi
+                        </a>
+                        <ul id="pengaturan" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 1
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 2
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Page 3
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Master Pengguna -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">
+                            <i class="bi bi-person pe-2"></i>
+                            Master Pengguna
+                        </a>
+                    </li>
+
+                    <!-- Pemeliharaan -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">
+                            <i class="bi bi-database pe-2"></i>
+                            Pemeliharaan
+                        </a>
+                    </li>
+
+                    <!-- Auth -->
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#auth"
+                            aria-expanded="false" aria-controls="auth">
+                            <i class="bi bi-person pe-2"></i>
+                            Auth
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Login
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Register
+                                </a>
+                            </li>
+                            <li id="logout" class="sidebar-item">
+                                <a href="#" class="sidebar-link">
+                                    Log-Out
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Component -->
+        <div class="main" id="addMargin">
+            <nav class="navbar navbar-expand px-3 border-bottom w-100" id="">
+                <!-- button for sidebar toggle -->
+                <button class="btn humHover" type="button" data-bs-theme="dark">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <main class="content px-3 py-2">
+                <div class="container-fluid w-100 h-100">
+
+                    <!-- dashPage -->
+                    <div class="dboardPage mb-3 text-white mt-5" id="dboardPage">
+                        <div class="d-inline-block align-items-center justify-content-center w-100">
+                            <i class="bi bi-sliders pe-2 fs-1"></i>
+                            <a href="#" class="text-white fs-1 fw-semibold">Dashboard</a>
+                        </div>
+
+                        <!-- content dashB -->
+                        <div class="d-flex justify-content-evenly gap-5">
+                            <!-- Pemasukan -->
+                            <div class="border-dashB container-fluid d-flex align-items-center justify-content-around"
+                                id="pemasukan">
+                                <img src="images/pemasukan.svg" class="img-dashB img-fluid rounded-circle me-2"
+                                    alt="kejaksaan">
+                                <a href="#" class="d-inline-block text-white">
+                                    <h1 class="fs-dashB text-wrap">Pemasukan Hari Ini</h1>
+                                    <h3 class="rp-dashB">Rp. xxx.xxx.xxx</h3>
+                                </a>
+                            </div>
+
+                            <!-- Pengeluaran -->
+                            <div class="border-dashB container-fluid d-flex align-items-center justify-content-around"
+                                id="pengeluaran">
+                                <img src="images/pengeluaran.svg" class="img-dashB img-fluid rounded-circle me-2"
+                                    alt="kejaksaan">
+                                <a href="#" class="d-inline-block text-white">
+                                    <h1 class="fs-dashB text-wrap">Pengeluaran Hari Ini</h1>
+                                    <h3 class="rp-dashB">Rp. xxx.xxx.xxx</h3>
+                                </a>
+                            </div>
+
+                            <!-- Tot_Pemasukan -->
+                            <div class="border-dashB container-fluid d-flex align-items-center justify-content-around"
+                                id="totMasuk">
+                                <img src="images/tot_pemasukan.svg" class="img-dashB img-fluid rounded-circle me-2"
+                                    alt="kejaksaan">
+                                <a href="#" class="d-inline-block text-white">
+                                    <h1 class="fs-dashB text-wrap">Total Pemasukan</h1>
+                                    <h3 class="rp-dashB">Rp. xxx.xxx.xxx</h3>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- chart -->
+                        <div class="d-flex justify-content-between mt-4"
+                            style="background-color: #6fbfcb; border-radius: 20px;">
+                            <div class="chart d-inline-block" style="height: 400px; ">
+                                <canvas class="d-block w-100 h-100" id="chartMasuk"></canvas>
+                            </div>
+                            <div class="chart d-inline-block " style="height: 400px; ">
+                                <canvas class="d-block w-100 h-100" id="chartKeluar"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- transPage -->
+                <div class="transPage mb-3" id="transPage" style="display: none;">
+                    <h3>Ini Halaman Transaksi Pembelian</h3>
+                </div>
+        </div>
+        </main>
+    </div>
+
+    </div>
+
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://kit.fontawesome.com/b902581f05.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
